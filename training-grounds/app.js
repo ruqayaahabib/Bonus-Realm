@@ -8,19 +8,22 @@
 const royalSupplies = ['Sword', 'Shield', 'Potion']
 
 function addSupply(supply) {
-  royalSupplies.push
+  royalSupplies.push(supply) //missing value 
 }
 
 function countSupplies() {
-  royalSupplies.length
+  return royalSupplies.length //sends back the length of the array
 }
 
 addSupply('Map')
 
 console.log(
-  `⚔️ The royal inventory contains ${countSupply()} supplies.`
+  `⚔️ The royal inventory contains ${countSupplies()} supplies.` //missing closing parenthesis + spelling error in "supplies"
 )
 
 /* ⭐ BONUS QUEST
    Use a loop to display every item with the 📦 icon.
 */
+for (let oneItem of royalSupplies) {
+  console.log(`📦 ${oneItem}`)
+}
