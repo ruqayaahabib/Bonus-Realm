@@ -1,6 +1,6 @@
 // Imports
 const express = require('express')
-const app = express
+const app = express() //add missing parentheses 
 require('dotenv').config()
 const mongoose = require('mongoose')
 const morgan = require('morgan')
@@ -43,7 +43,7 @@ function isUserSignedIn(req, res, next) {
     return res.redirect('/auth/sign-in')
   }
 
-  next
+  next() //missing parentheses 
 }
 
 // Make the signed-in user available in every EJS view
